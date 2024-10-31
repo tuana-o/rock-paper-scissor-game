@@ -16,10 +16,34 @@ function getComputerChoice() {
 //Function to output user's choice of rock/paper/scissor
 function getHumanChoice() {
     let choice = prompt("What's your choice").toLowerCase();
-    if (choice !== 'rock' || 'paper' || 'scissor') {
-        return prompt('Please pick either rock/paper/scissor!')
+    while (choice != "rock" && choice != "paper" && choice != "scissor") {
+        choice = prompt("Please pick either rock/paper/scissor!").toLowerCase();
     }
     return choice
 }
 
-console.log(getHumanChoice())
+
+
+// let humanScore = 0;
+// let computerScore = 0;
+
+// function playRound(humanChoice, computerChoice) {
+//     let compareChoice = humanChoice.localeCompare(computerChoice);
+//     if (compareChoice === 1) {
+//         humanScore++;
+//         console.log(`Human won!\n Score is Human${humanScore}:${computerScore}Computer`);
+//     }
+//     else if (compareChoice === -1) {
+//         computerScore++;
+//         console.log(`Computer won!\n Score is Human${humanScore}:${computerScore}Computer`);
+//     }
+//     else {
+//         console.log(`No one won!\n Score is Human${humanScore}:${computerScore}Computer`);
+//     }
+    
+// }
+
+// const humanSelection = getHumanChoice();
+// const computerSelection = getComputerChoice();
+
+// playRound(humanSelection, computerSelection);
