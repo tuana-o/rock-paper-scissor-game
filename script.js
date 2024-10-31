@@ -13,9 +13,9 @@ function getComputerChoice() {
 }
 
 
-
+//Function to output user's choice of rock/paper/scissor
 function getHumanChoice() {
-    return prompt("What's your choice");
+    return prompt("What's your choice").toLowerCase();
 }
 
 console.log(getHumanChoice())
