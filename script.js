@@ -24,26 +24,26 @@ function getHumanChoice() {
 
 
 
-// let humanScore = 0;
-// let computerScore = 0;
+let humanScore = 0;
+let computerScore = 0;
 
-// function playRound(humanChoice, computerChoice) {
-//     let compareChoice = humanChoice.localeCompare(computerChoice);
-//     if (compareChoice === 1) {
-//         humanScore++;
-//         console.log(`Human won!\n Score is Human${humanScore}:${computerScore}Computer`);
-//     }
-//     else if (compareChoice === -1) {
-//         computerScore++;
-//         console.log(`Computer won!\n Score is Human${humanScore}:${computerScore}Computer`);
-//     }
-//     else {
-//         console.log(`No one won!\n Score is Human${humanScore}:${computerScore}Computer`);
-//     }
+function playRound(humanChoice, computerChoice) {
+    let compareChoice = humanChoice.localeCompare(computerChoice);
+    if (compareChoice === 1) {
+        humanScore++;
+        console.log(`Human won!\n Score is Human${humanScore}:${computerScore}Computer`);
+    }
+    else if (compareChoice === -1) {
+        computerScore++;
+        console.log(`Computer won!\n Score is Human${humanScore}:${computerScore}Computer`);
+    }
+    else {
+        console.log(`No one won!\n Score is Human${humanScore}:${computerScore}Computer`);
+    }
     
-// }
+}
 
-// const humanSelection = getHumanChoice();
-// const computerSelection = getComputerChoice();
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
 
-// playRound(humanSelection, computerSelection);
+playRound(humanSelection, computerSelection);
