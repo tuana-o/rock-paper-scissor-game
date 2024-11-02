@@ -58,13 +58,18 @@ function playRound(humanChoice, computerChoice) {
         humanScore++;
         console.log("You win! Scissors beats Paper")
     }
-
-    console.log(`Score: You ${humanScore}:${computerScore} Computer`)
-    console.log(humanChoice)
-    console.log(computerChoice)
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
 
-playRound(humanSelection, computerSelection);
+
+
+function playGame() {
+    for(let i = 0; i < 5; i++) {
+        const humanSelection = getHumanChoice();
+        const computerSelection = getComputerChoice();
+        playRound(humanSelection, computerSelection);
+        console.log(`Score: You ${humanScore}:${computerScore} Computer`)
+    }
+}
+
+playGame();
