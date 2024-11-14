@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    font: "Roboto", sans-serif;
+    height: 100vh;
+    font-size: 16px;
+    line-height: 1.5;
+    background-image: url('./images/background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
+}
+
+
+.header {
+    background-color: hsla(0, 0%, 0%, 0.302);
+    color: white;
+    font-size: 48px;
+    height: 80px;
+    margin-top: 20px;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.computer {
+    display: flex;
+    justify-content: flex-end;
+    width: 30%;
+}
+
+.user {
+    display: flex;
+    justify-content: flex-start;
+    width: 29%;
+}
+
+
+
+@keyframes popOut {
+    0% {
+        transform: scale(1);
+    }
+
+    70% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.score {
+    position: absolute;
+    left: 46%;
+    font-size: 80px;
+    font-weight: 900;
+    transition: transform 0.3s ease;
+}
+
+.score.pop {
+    animation: popOut 2s ease;
+}
+
+.game {
+    flex: 1;
+}
+
+.game .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.game img {
+    margin-right: 100px;
+    margin-left: 100px;
+    height: 350px;
+    width: 350px;
+}
+
+.footer {
+    min-height: 100px;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.footer img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    
+}
+
+.scissor img {
+    transform: scale(1.4);
+} 
+
+.footer img:hover {
+    transform: scale(1.2);
+}
+
+.scissor img:hover {
+    transform: scale(1.6);
+}
+
